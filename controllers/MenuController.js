@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const ContactController = require("./ContactController");
 
 module.exports = class MenuController {
   //define and export MenuController as a class
@@ -11,7 +12,7 @@ module.exports = class MenuController {
         choices: ["Add new contact", "Get date", "Exit"]
       }
     ];
-    this.contacts = [];
+    this.book = new ContactController();
   }
 
   main() {
